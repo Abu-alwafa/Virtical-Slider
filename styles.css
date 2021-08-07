@@ -1,0 +1,78 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  /* height: 100vh; */
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  overflow: hidden;
+}
+.slider-container{
+  position: relative;
+  /* overflow-y: hidden; */
+  width: 100vw;
+  height: 100vh;
+  
+}
+.left-slide{
+  /* width: 50%; */
+  height: 100%;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  z-index: 1;
+  color: white;
+  transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-shadow: 0 3px 6px black;
+}
+.left-slide h1{
+  margin: 0 0 10px 0;
+}
+.right-slide{
+  width: 100%;
+  height: 100%;
+  /* position: relative;
+  top: 0;
+  left: 0; */
+  transition: transform 0.5s ease-in-out;
+}
+.right-slide > div{
+  width: 100%;
+  height: 100%;
+}
+button{
+  background: rgb(255, 255, 255,0.6);
+  border: none;
+  outline: none;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+button:hover{
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.action-buttons button{
+  position: absolute;
+  z-index: 1;
+  left: 250px;
+  top: 52%;
+
+}
+.action-buttons .down-button{
+  transform: translate(-100%,100%);
+}
